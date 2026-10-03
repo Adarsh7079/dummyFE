@@ -1,19 +1,31 @@
 import dlflogo from "../../assets/images/HomePageImages/TopDevelopers/DLF.webp";
 import m3mlogo from "../../assets/images/HomePageImages/TopDevelopers/M3M.webp";
-import mahindralogo from "../../assets/images/HomePageImages/TopDevelopers/Mahindra Lifespaces.webp";
-import smartworldlogo from "../../assets/images/HomePageImages/TopDevelopers/Smartworld.webp";
+import godrej from "../../assets/images/HomePageImages/TopDevelopers/godrej.png";
+import whiteland from "../../assets/images/HomePageImages/TopDevelopers/whiteland.jpeg";
+import elan from "../../assets/images/HomePageImages/TopDevelopers/elan.jpeg";
+import signature from "../../assets/images/HomePageImages/TopDevelopers/signature.jpeg";
+import experion from "../../assets/images/HomePageImages/TopDevelopers/experion.jpeg";
+import birla from "../../assets/images/HomePageImages/TopDevelopers/birla.png";
+import emaar from "../../assets/images/HomePageImages/TopDevelopers/emaar.png";
+import puri from "../../assets/images/HomePageImages/TopDevelopers/puri.png";
+import spj from "../../assets/images/HomePageImages/TopDevelopers/spj.png";
+
+
 import { motion } from "framer-motion";
 
 const HomePageTopDeveloper = () => {
   const upperMarquee = [
     dlflogo,
     m3mlogo,
-    mahindralogo,
-    smartworldlogo,
-    dlflogo,
-    m3mlogo,
-    mahindralogo,
-    smartworldlogo
+    godrej,
+    whiteland,
+    elan,
+    signature,
+    experion,
+    birla,
+    emaar,
+    puri,
+    spj,
   ];
 
   return (

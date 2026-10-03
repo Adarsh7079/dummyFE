@@ -18,6 +18,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const HomePageTrendingProjects = () => {
   const [itemIndex, setItemIndex] = useState(0);
@@ -153,7 +154,7 @@ const HomePageTrendingProjects = () => {
       </div>
 
       <div className="rounded-3xl border border-gold py-2 px-4">
-        <h3 className="text-xl font-bold text-gold">More Projects</h3>
+        <h3 className="text-xl font-bold text-gold"><Link to="/projects">View All Projects</Link></h3>
       </div>
     </div>
   );
