@@ -1,0 +1,7 @@
+/* src/assets/styles/custom.css */
+.gradient-hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, #FFD700, #FFB14E);
+  }
+  

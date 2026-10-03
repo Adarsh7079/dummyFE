@@ -1,0 +1,81 @@
+@import './assets/styles/custom.css';
+
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Aesthete Signature';
+  src: url('../src/assets/fonts/AestheteSignature.ttf') format('truetype');
+}
+
+.text-aesthete {
+  font-family: 'Aesthete Signature', cursive;
+}
+@font-face {
+  font-family: 'Addington CF Bold';
+  src: url('./assets/fonts/ADDINGTONCF-BOLD.OTF') format('opentype');
+}
+.text-addington {
+  font-family: 'Addington CF Bold', serif;
+}
+body {
+  background-color: black;
+  @apply font-montserrat;
+  background-position-x: initial;
+  background-position-y: initial;
+}
+
+@layer components {
+  .vertical-line {
+    @apply absolute top-0 bottom-0 left-1/2 w-px bg-white transform -translate-x-1/2;
+  }
+}
+
+.vertical-line {
+  width: 2px;
+  /* Adjust the width as needed */
+  background-color: gold;
+}
+
+.project-form {
+  width: 25%;
+  float: right;
+  position: relative;
+  top: 162px;
+  transition: top 0.3s ease;
+}
+
+.project-form.non-sticky {
+  position: relative;
+  top: auto;
+  top: 162px;
+}
+/* top-[120px] */
+
+
+
+
+
+
+
+
+/* Transition css of carousal slider (Trending Project) */
+
+.shadow-white {
+  box-shadow: 0 4px 6px rgba(235, 8, 8, 1.1), 0 1px 3px rgba(235, 4, 4, 1.08);
+}
+
+.slick-slide {
+	transform: scale(0.8);
+	transition: all 0.4s ease-in-out;
+	padding: 40px 0;
+}
+.slick-center {
+	transform: scale(1.1);
+}
+.slick-slide img {
+	max-width: 100%;
+	transition: all 0.4s ease-in-out;
+}
