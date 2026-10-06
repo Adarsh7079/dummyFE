@@ -1,4 +1,5 @@
 import background from "../../assets/images/AboutPage/trendingprojects.webp";
+import founder from "../../assets/founder.jpeg";
 import { FaLinkedin } from "react-icons/fa";
 
 const teamMemberImage = "/team-member-placeholder.svg";
@@ -22,14 +23,15 @@ const AboutUsPageMembers = () => {
             <div className="w-[270px] h-[370px] rounded-xl text-center bg-grey border-gold border-2 flex flex-col">
               <div className="h-[75%] bg-grey rounded-xl border-b-2 border-gold">
                 <img
-                  src={teamMemberImage}
+                  src={founder}
+                  alt="Adarsh, Founder & CEO"
                   className="w-full h-[100%] rounded-xl shadow-3xl-white"
                 />
               </div>
               <div className="px-4 md:pb-4 flex flex-col justify-center items-center text-white">
                 <div className="w-full flex flex-col items-center mt-1">
                   <h3 className="text-2xl text-gold font-medium leading-tight text-addington">
-                    Alex Morgan
+                    Adarsh
                   </h3>
                   <h4 className="text-lg font-light text-gray-300 ">
                     Founder & CEO
@@ -174,7 +176,7 @@ const AboutUsPageMembers = () => {
               {
                 name: "Alex Morgan",
                 title: "Founder & CEO",
-                image: teamMemberImage,
+                image: founder,
               },
               {
                 name: "Casey Taylor",
