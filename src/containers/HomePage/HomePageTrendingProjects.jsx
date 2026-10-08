@@ -18,7 +18,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 
 const HomePageTrendingProjects = () => {
   const [itemIndex, setItemIndex] = useState(0);
@@ -29,24 +29,28 @@ const HomePageTrendingProjects = () => {
       image: Image1,
       address: "Sector 65, Gurgaon",
       price: "On Request",
+      link: "/m3m/alltitude",
     },
     {
       title: "M3M Mansion",
       image: Image2,
       address: "Sector 113, Gurgaon",
       price: "On Request",
+      link: "/m3m/mansion",
     },
     {
       title: "DLF The Arbour",
       image: Image3,
       address: "Sector 113, Gurgaon",
       price: "On Request",
+      link: "/dlf/the-arbour",
     },
     {
       title: "Whiteland Urban Resort",
       image: Image4,
       address: "Sector 103, Gurgaon",
       price: "On Request",
+      link: "/whiteland/urban-resort",
     },
   ];
 
@@ -115,38 +119,63 @@ const HomePageTrendingProjects = () => {
       <div className="Desktop container mx-auto px-4 py-8">
         <Slider {...settingsTwo} className="flex">
           {newsItems.map((item, idx) => (
-            <div
-              key={idx}
-              className={
-                idx === itemIndex
-                  ? "opacity-100 rounded-xl transition-opacity duration-300 ease-in-out"
-                  : "opacity-75 rounded-xl"
-              }
-            >
-              <div className="w-full border sm:w-[90%] md:w-[85%] mx-auto lg:w-[80%] xl:w-[75%] h-[500px] sm:h-[460px]   rounded-xl text-center bg-white transition-colors duration-300 ease-in-out shadow-lg flex flex-col justify-between shadow-3xl-white">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-[65%] rounded-t-xl shadow-3xl-white"
-                />
-                <div className="px-4 md:pb-4">
-                  <h3 className="text-sm md:text-xl text-black text-left font-medium leading-2">
-                    {item.title}
-                  </h3>
-                  <div className="flex items-center -ml-1 mt-2 ">
-                    <MdLocationOn className="text-2xl text-black" />
-                    <h6 className="text-mg text-black ml-1">{item.address}</h6>
+            <div key={idx} className="px-2">
+              <div
+                className={
+                  idx === itemIndex
+                    ? "opacity-100 rounded-xl transition-opacity duration-300 ease-in-out"
+                    : "opacity-75 rounded-xl transition-opacity duration-300 ease-in-out"
+                }
+              >
+                <Link
+                  to={item.link}
+                  className="block w-full sm:w-[90%] md:w-[85%] lg:w-[80%] xl:w-[75%] mx-auto"
+                >
+                  <div className="w-full h-[500px] sm:h-[460px] rounded-xl text-center bg-white transition-all duration-300 ease-in-out shadow-lg flex flex-col justify-between overflow-hidden hover:scale-[1.02] cursor-pointer">
+
+                    {/* Image */}
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-[65%] object-cover rounded-t-xl"
+                    />
+
+                    {/* Details */}
+                    <div className="px-4 pb-4">
+
+                      {/* Title */}
+                      <h3 className="text-sm md:text-xl text-black text-left font-medium">
+                        {item.title}
+                      </h3>
+
+                      {/* Location */}
+                      <div className="flex items-center -ml-1 mt-2">
+                        <MdLocationOn className="text-2xl text-black" />
+
+                        <h6 className="text-md text-black ml-1">
+                          {item.address}
+                        </h6>
+                      </div>
+
+                      {/* Price */}
+                      <div className="flex items-center mt-2">
+                        <BsCurrencyRupee className="text-xl text-black" />
+
+                        <h6 className="text-md text-black ml-1">
+                          {item.price}
+                        </h6>
+                      </div>
+
+                      {/* View More */}
+                      <div className="mt-3 flex justify-start">
+                        <span className="bg-black text-white py-1 px-3 rounded-lg">
+                          View More
+                        </span>
+                      </div>
+
+                    </div>
                   </div>
-                  <div className="flex items-center mt-2 hidden md:flex">
-                    <BsCurrencyRupee className="text-xl text-black" />
-                    <h6 className="text-mg text-black ml-1">{item.price}</h6>
-                  </div>
-                  <div className="mt-2 ml-1 flex justify-left">
-                    <button className="bg-black text-white py-1 px-2 rounded-lg hover:bg-white hover:text-black hover:border-black hover:border transition duration-300">
-                      View More
-                    </button>
-                  </div>
-                </div>
+                </Link>
               </div>
             </div>
           ))}
