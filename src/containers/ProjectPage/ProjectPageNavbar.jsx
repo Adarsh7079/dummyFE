@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/images/logo.webp";
+import logo from "../../assets/logo.jpeg";
 
 const Navbar = ({ isHomePage }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,11 @@ const Navbar = ({ isHomePage }) => {
       <div className="sticky top-0 z-50 bg-black border-gold">
         <nav className="flex items-center justify-between p-4 text-transparent bg-clip-text bg-gold px-4 md:px-20">
           <div className="w-[50%] flex items-center">
-            <img src={logo} alt="Logo" className="w-[30%] md:w-[23%] mr-4" />
+            <img
+              src={logo}
+              alt="Gurugram Houses logo"
+              className="mr-4 h-10 w-auto max-w-[220px] object-contain md:h-12"
+            />
           </div>
 
           {/* Mobile Menu Button */}

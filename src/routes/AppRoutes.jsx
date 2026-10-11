@@ -16,14 +16,14 @@ const AppRoutes = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/projects/m3m/golfhills" element={<GolfHills />} />
-                <Route path="/about" element={<About/>} />
-                <Route path="/m3mIndia" element={<M3MIndia/>} />
+                <Route path="/about" element={<About />} />
+                <Route path="/m3mIndia" element={<M3MIndia />} />
                 <Route path="/projects" element={<ProjectDetails />} />
-                <Route path='/m3m/golfhills' element={<GolfHills/>} />
-                <Route path='/m3m/alltitude' element={<Altitude/>} />
-                <Route path='/m3m/mansion' element={<Mansion/>} />
-                <Route path='/dlf/the-arbour' element={<TheArbour/>} />
-                <Route path='/whiteland/urban-resort' element={<UrbanResort/>} />
+                <Route path='/m3m/golfhills' element={<GolfHills />} />
+                <Route path='/m3m/alltitude' element={<Altitude />} />
+                <Route path='/m3m/mansion' element={<Mansion />} />
+                <Route path='/dlf/the-arbour' element={<TheArbour />} />
+                <Route path='/whiteland/urban-resort' element={<UrbanResort />} />
             </Routes>
         </Router>
     );

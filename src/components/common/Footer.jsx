@@ -5,6 +5,7 @@ import linkedINLogo from "../../assets/images/Linkedin.png";
 import instagramLogo from "../../assets/images/Instagram.png";
 import xLogo from "../../assets/images/X.png";
 import YoutubeLogo from "../../assets/images/Youtube.png";
+import logo from "../../assets/logo.jpeg";
 import { IoCall } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 
@@ -15,7 +16,11 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row border bg-grey rounded-lg border-gold p-4 mb-4">
           <div className="w-full md:w-1/3 ml-0 md:ml-8 mb-4 md:mb-0">
             <div className="mb-2">
-              <p className="text-center text-xl font-semibold text-gold md:text-left">Cedarstone Realty</p>
+              <img
+                src={logo}
+                alt="Gurugram Houses"
+                className="mx-auto h-10 w-auto max-w-full object-contain md:mx-0"
+              />
             </div>
             <div>
               <p className="text-center md:text-left">
